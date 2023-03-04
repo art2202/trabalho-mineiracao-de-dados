@@ -1,0 +1,1 @@
+# trabalho mineiracao de dados

@@ -6,8 +6,6 @@ from sklearn.preprocessing import StandardScaler
 
 datasetLearning = pd.read_csv("new_dataset.csv")
 
-X = datasetLearning.iloc[:, :].values
-
 # axis=1 significa coluna, drop("causas_resumidas_Condutor", axis=1) = apagar coluna causas_resumidas_condutor
 x_dataset = datasetLearning.drop("causas_resumidas_Condutor", axis=1)
 

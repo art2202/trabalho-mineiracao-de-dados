@@ -3,7 +3,7 @@ import pandas as pd
 from apyori import apriori
 
 # carregando os dados do arquivo CSV em um DataFrame
-dados = pd.read_csv('new_dataset.csv.csv')
+dados = pd.read_csv('new_dataset.csv')
 
 # convertendo os dados do DataFrame em uma lista de listas
 dados = dados.values.tolist()

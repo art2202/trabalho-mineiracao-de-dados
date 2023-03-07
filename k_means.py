@@ -1,5 +1,8 @@
 import pandas as pd
 from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+
+
 
 # Lê o arquivo CSV em um DataFrame do pandas
 data = pd.read_csv('new_dataset.csv')
@@ -17,4 +20,9 @@ kmeans.fit(X)
 print(kmeans.cluster_centers_)
 
 # Imprime as etiquetas de cluster para cada registro
-print(kmeans.labels_)
+print( silhouette_score(X, kmeans.labels_))
+
+
+print(kmeans.inertia_)
+
+

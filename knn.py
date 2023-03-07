@@ -1,5 +1,5 @@
 import pandas as pd
-from sklearn.metrics import accuracy_score, f1_score
+from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_score
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import StandardScaler
@@ -25,7 +25,14 @@ result = knn.predict(x_dataset_test)
 
 accuracy = accuracy_score(y_dataset_test, result)
 f1 = f1_score(result, y_dataset_test, average="weighted")
+recall = recall_score(result,y_dataset_test,average="weighted",zero_division=0)
+precision = precision_score(result, y_dataset_test,average="weighted")
 
-print("Accuracy:", accuracy)
+print("Acurácia do knn:", accuracy)
+print("F1 do Knn:", f1)
+print("Cobertura do knn", recall)
+print("Precisão do knn", precision)
+
+
 
 
